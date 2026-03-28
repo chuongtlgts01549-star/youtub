@@ -1,0 +1,91 @@
+body{
+  margin:0;
+  font-family: Arial;
+  background:#0f0f0f;
+  color:white;
+}
+
+header{
+  background:#202020;
+  padding:15px;
+  font-size:24px;
+  text-align:center;
+}
+
+#mainContent{
+  display:flex;
+  padding:10px;
+}
+
+#playerBox{
+  flex:3;
+  text-align:center;
+}
+
+#mainPlayer{
+  width:90%;
+  max-width:700px;
+}
+
+#commentsBox{
+  text-align:left;
+  margin-top:10px;
+}
+
+#commentsBox input{
+  width:80%;
+  padding:5px;
+}
+
+#commentsBox button{
+  padding:5px 10px;
+  margin-left:5px;
+}
+
+#sidebar{
+  flex:1;
+  margin-left:20px;
+}
+
+#sidebarVideos .videoBox{
+  margin-bottom:10px;
+}
+
+#uploadBox{
+  padding:10px;
+  text-align:center;
+  background:#181818;
+}
+
+#videos{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,300px);
+  gap:20px;
+  padding:20px;
+  justify-content:center;
+}
+
+.videoBox{
+  background:#202020;
+  padding:10px;
+  border-radius:10px;
+}
+
+.videoBox video{
+  width:100%;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+button{
+  background:red;
+  color:white;
+  border:none;
+  padding:5px 10px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#cc0000;
+}
