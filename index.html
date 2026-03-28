@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Mini YouTube Scheduler</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+Mini YouTube Scheduler
+<br><br>
+<input type="text" id="search" placeholder="Search video...">
+</header>
+
+<div id="mainContent">
+  <div id="playerBox">
+    <video id="mainPlayer" controls></video>
+    <div id="commentsBox">
+      <h3>Comments</h3>
+      <div id="comments"></div>
+      <input type="text" id="commentInput" placeholder="Add comment">
+      <button id="addComment">Post</button>
+    </div>
+  </div>
+
+  <div id="sidebar">
+    <h3>Suggested Videos</h3>
+    <div id="sidebarVideos"></div>
+  </div>
+</div>
+
+<div id="uploadBox">
+  <input type="file" id="upload" accept="video/*" multiple>
+</div>
+
+<div id="videos"></div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
