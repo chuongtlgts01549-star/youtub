@@ -85,7 +85,125 @@ button{
   border-radius:5px;
   cursor:pointer;
 }
+/* ----- Nâng cấp giao diện dark theme ----- */
 
+/* Hover effect cho video thumbnail */
+.videoBox video:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 15px #ff0000;
+}
+
+/* Thêm shadow cho mỗi videoBox */
+.videoBox {
+  box-shadow: 0 0 10px #111;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.videoBox:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px #ff4444;
+}
+
+/* Sidebar scroll đẹp */
+#sidebarVideos {
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+#sidebarVideos::-webkit-scrollbar {
+  width: 8px;
+}
+
+#sidebarVideos::-webkit-scrollbar-thumb {
+  background: #ff0000;
+  border-radius: 4px;
+}
+
+/* Feed scroll đẹp */
+#videos {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+#videos::-webkit-scrollbar {
+  width: 10px;
+}
+
+#videos::-webkit-scrollbar-thumb {
+  background: #cc0000;
+  border-radius: 5px;
+}
+
+/* Nút Download nổi bật */
+.videoBox button.downloadBtn {
+  background: #00aa00;
+}
+
+.videoBox button.downloadBtn:hover {
+  background: #00ff00;
+  color:#000;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 800px){
+  #mainContent {
+    flex-direction: column;
+  }
+  #sidebar {
+    margin-left:0;
+    margin-top:20px;
+  }
+  #videos {
+    grid-template-columns: repeat(auto-fill, 90%);
+    gap:15px;
+  }
+}
+
+/* Comment box đẹp hơn */
+#commentsBox p {
+  background:#181818;
+  padding:5px 10px;
+  border-radius:5px;
+  margin:5px 0;
+}
+
+/* Input comment focus */
+#commentsBox input:focus {
+  outline:none;
+  border:2px solid #ff0000;
+  background:#222;
+  color:white;
+}
+
+/* Header animation nhẹ */
+header {
+  background: linear-gradient(90deg,#202020,#333,#202020);
+  animation: headerGlow 5s infinite;
+}
+
+@keyframes headerGlow {
+  0%,100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  0% { background-size: 200% 200%; }
+}
+
+/* Nút hover animation */
+button {
+  transition: 0.3s ease;
+}
+
+/* Video title */
+.videoBox p {
+  font-size:16px;
+  font-weight:bold;
+  color:#fff;
+  margin:5px 0;
+  text-overflow: ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+}
 button:hover{
   background:#cc0000;
 }
